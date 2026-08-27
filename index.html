@@ -1,0 +1,372 @@
+ 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Exclusive Content • 18+</title>
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+
+body{
+  font-family:Arial,sans-serif;
+  background:linear-gradient(135deg,#120812,#2b1027,#100811);
+  color:#fff;
+  min-height:100vh;
+}
+
+.container{
+  width:100%;
+  max-width:520px;
+  margin:auto;
+  padding:20px;
+}
+
+.hero{
+  text-align:center;
+  padding:25px 0 20px;
+}
+
+.badge{
+  display:inline-block;
+  padding:7px 14px;
+  border-radius:30px;
+  background:#ffffff15;
+  border:1px solid #ffffff20;
+  font-size:12px;
+  letter-spacing:1px;
+  margin-bottom:18px;
+}
+
+.hero h1{
+  font-size:38px;
+  line-height:1.05;
+  margin-bottom:12px;
+}
+
+.gradient{
+  background:linear-gradient(90deg,#ff65ad,#c084fc);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+.hero p{
+  color:#cfc2cf;
+  line-height:1.6;
+}
+
+.card{
+  background:#ffffff0d;
+  border:1px solid #ffffff16;
+  border-radius:24px;
+  padding:18px;
+  margin-top:18px;
+  backdrop-filter:blur(15px);
+}
+
+.preview{
+  position:relative;
+  overflow:hidden;
+  border-radius:18px;
+  background:#241525;
+}
+
+.preview img{
+  width:100%;
+  display:block;
+  aspect-ratio:4/5;
+  object-fit:cover;
+}
+
+.lock{
+  position:absolute;
+  inset:0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:linear-gradient(transparent,#080408cc);
+}
+
+.lock span{
+  background:#000b;
+  padding:12px 18px;
+  border-radius:30px;
+  font-weight:bold;
+}
+
+.video{
+  margin-top:18px;
+  position:relative;
+  border-radius:18px;
+  overflow:hidden;
+  background:#090609;
+}
+
+.video video{
+  width:100%;
+  display:block;
+  max-height:420px;
+  object-fit:cover;
+}
+
+.play{
+  position:absolute;
+  inset:0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  pointer-events:none;
+}
+
+.play span{
+  width:70px;
+  height:70px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:#000b;
+  font-size:28px;
+}
+
+.cta{
+  display:block;
+  text-align:center;
+  text-decoration:none;
+  margin-top:20px;
+  padding:17px;
+  border-radius:15px;
+  background:linear-gradient(90deg,#ff4f9a,#a855f7);
+  color:white;
+  font-weight:800;
+  font-size:17px;
+  box-shadow:0 12px 30px #a855f744;
+}
+
+.info{
+  text-align:center;
+  color:#9f919f;
+  font-size:11px;
+  line-height:1.6;
+  margin-top:15px;
+}
+
+footer{
+  text-align:center;
+  color:#756875;
+  font-size:11px;
+  padding:20px 0;
+}
+
+/* AGE GATE */
+
+.gate{
+  position:fixed;
+  inset:0;
+  z-index:9999;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:20px;
+  background:#080509f5;
+}
+
+.gate-box{
+  width:100%;
+  max-width:400px;
+  background:#1b111c;
+  border:1px solid #ffffff18;
+  border-radius:25px;
+  padding:30px 22px;
+  text-align:center;
+}
+
+.gate-icon{
+  font-size:52px;
+  margin-bottom:12px;
+}
+
+.gate h2{
+  font-size:27px;
+  margin-bottom:10px;
+}
+
+.gate p{
+  color:#b9abb9;
+  font-size:14px;
+  line-height:1.6;
+  margin-bottom:22px;
+}
+
+.buttons{
+  display:grid;
+  gap:10px;
+}
+
+button{
+  border:0;
+  border-radius:13px;
+  padding:15px;
+  font-size:15px;
+  font-weight:bold;
+  cursor:pointer;
+}
+
+.enter{
+  color:#fff;
+  background:linear-gradient(90deg,#ff4f9a,#a855f7);
+}
+
+.exit{
+  color:#ddd;
+  background:#ffffff12;
+}
+
+.hidden{display:none}
+</style>
+</head>
+
+<body>
+
+<!-- AGE GATE -->
+<div class="gate" id="ageGate">
+  <div class="gate-box">
+
+    <div class="gate-icon">🔞</div>
+
+    <h2>18+ Only</h2>
+
+    <p>
+      This page contains mature, sensual creator content.
+      You must be at least 18 years old to continue.
+    </p>
+
+    <div class="buttons">
+      <button class="enter" onclick="enterSite()">
+        I'm 18+ — Enter
+      </button>
+
+      <button class="exit" onclick="leaveSite()">
+        Exit
+      </button>
+    </div>
+
+  </div>
+</div>
+
+
+<main class="container">
+
+  <section class="hero">
+
+    <div class="badge">
+      🔞 ADULT CREATOR • 18+
+    </div>
+
+    <h1>
+      Want to See My
+      <span class="gradient">Exclusive Content?</span>
+    </h1>
+
+    <p>
+      Get a preview of my latest photos and video content.
+    </p>
+
+  </section>
+
+
+  <section class="card">
+
+    <!-- PREVIEW IMAGE -->
+    <div class="preview">
+
+      <!-- GANTI DENGAN FOTO MILIKMU -->
+      <img
+        src="preview.jpg"
+        alt="Creator preview"
+      >
+
+      <div class="lock">
+        <span>🔒 Exclusive Preview</span>
+      </div>
+
+    </div>
+
+
+    <!-- VIDEO TEASER -->
+    <div class="video">
+
+      <!-- GANTI teaser.mp4 DENGAN VIDEO MILIKMU -->
+      <video
+        controls
+        poster="preview.jpg"
+        playsinline
+      >
+        <source src="teaser.mp4" type="video/mp4">
+        Your browser does not support video playback.
+      </video>
+
+      <div class="play">
+        <span>▶</span>
+      </div>
+
+    </div>
+
+
+    <!-- CPA CTA -->
+    <a
+      class="cta"
+      href="https://securecd-smrt.com/?a=99957&c=174995&co=144070&mt=19&s1=PENING&s2=WARRIOR"
+      target="_blank"
+      rel="nofollow sponsored noopener"
+      onclick="trackClick()"
+    >
+      💕 Continue & View Content
+    </a>
+
+    <p class="info">
+      18+ only. This is an independent promotional page.
+      Availability and eligibility may apply.
+    </p>
+
+  </section>
+
+
+  <footer>
+    © 2026 • Exclusive Creator Content • 18+
+  </footer>
+
+</main>
+
+
+<script>
+
+function enterSite(){
+  localStorage.setItem("age_verified","true");
+  document.getElementById("ageGate")
+    .classList.add("hidden");
+}
+
+function leaveSite(){
+  window.location.href="https://www.google.com/";
+}
+
+function trackClick(){
+  console.log("CPA CTA clicked");
+}
+
+window.addEventListener("DOMContentLoaded",function(){
+
+  if(localStorage.getItem("age_verified")==="true"){
+    document.getElementById("ageGate")
+      .classList.add("hidden");
+  }
+
+});
+
+</script>
+
+</body>
+</html>
